@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Ducks",
+        "repositoryURL": "https://github.com/AlexLittlejohn/Ducks.git",
+        "state": {
+          "branch": null,
+          "revision": "707edb3989aa8d30d52d4e58b21e0d4e96bc0617",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
