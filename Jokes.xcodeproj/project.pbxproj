@@ -63,6 +63,7 @@
 		E39F2F2523FE8DEC00E1FEC5 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
 		E39F2F2723FE92D300E1FEC5 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		E39F2F2923FE98F400E1FEC5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E39F2F2A23FE9A3400E1FEC5 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		E3ADF34123F8A48700B6E7C4 /* TextStyleModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifiers.swift; sourceTree = "<group>"; };
 		E3ADF34323F8A8C400B6E7C4 /* FancyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +103,7 @@
 		E360A90823F6910A003949BF = {
 			isa = PBXGroup;
 			children = (
+				E39F2F2A23FE9A3400E1FEC5 /* LICENSE.md */,
 				E39F2F2923FE98F400E1FEC5 /* README.md */,
 				E39F2F2023FC905E00E1FEC5 /* Privacy.md */,
 				E360A91323F6910A003949BF /* Jokes */,
