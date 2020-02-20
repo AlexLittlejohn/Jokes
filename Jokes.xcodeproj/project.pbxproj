@@ -22,6 +22,9 @@
 		E360A94123F6941D003949BF /* NetworkingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360A94023F6941D003949BF /* NetworkingMiddleware.swift */; };
 		E360A94323F6993A003949BF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360A94223F6993A003949BF /* Store.swift */; };
 		E360A94523F699D2003949BF /* ViewStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E360A94423F699D2003949BF /* ViewStateView.swift */; };
+		E39F2F2223FE83DC00E1FEC5 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39F2F2123FE83DC00E1FEC5 /* AboutView.swift */; };
+		E39F2F2623FE8DEC00E1FEC5 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39F2F2523FE8DEC00E1FEC5 /* InfoButton.swift */; };
+		E39F2F2823FE92D300E1FEC5 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39F2F2723FE92D300E1FEC5 /* BackgroundView.swift */; };
 		E3ADF34223F8A48700B6E7C4 /* TextStyleModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADF34123F8A48700B6E7C4 /* TextStyleModifiers.swift */; };
 		E3ADF34423F8A8C400B6E7C4 /* FancyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADF34323F8A8C400B6E7C4 /* FancyButtonView.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,11 @@
 		E360A94023F6941D003949BF /* NetworkingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMiddleware.swift; sourceTree = "<group>"; };
 		E360A94223F6993A003949BF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E360A94423F699D2003949BF /* ViewStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateView.swift; sourceTree = "<group>"; };
+		E39F2F2023FC905E00E1FEC5 /* Privacy.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Privacy.md; sourceTree = "<group>"; };
+		E39F2F2123FE83DC00E1FEC5 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E39F2F2523FE8DEC00E1FEC5 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
+		E39F2F2723FE92D300E1FEC5 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		E39F2F2923FE98F400E1FEC5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3ADF34123F8A48700B6E7C4 /* TextStyleModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyleModifiers.swift; sourceTree = "<group>"; };
 		E3ADF34323F8A8C400B6E7C4 /* FancyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +93,8 @@
 				E3ADF34123F8A48700B6E7C4 /* TextStyleModifiers.swift */,
 				E308D89C23F6AB1D00E9A2B2 /* LoadingView.swift */,
 				E3ADF34323F8A8C400B6E7C4 /* FancyButtonView.swift */,
+				E39F2F2523FE8DEC00E1FEC5 /* InfoButton.swift */,
+				E39F2F2723FE92D300E1FEC5 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,6 +102,8 @@
 		E360A90823F6910A003949BF = {
 			isa = PBXGroup;
 			children = (
+				E39F2F2923FE98F400E1FEC5 /* README.md */,
+				E39F2F2023FC905E00E1FEC5 /* Privacy.md */,
 				E360A91323F6910A003949BF /* Jokes */,
 				E360A92A23F6910C003949BF /* JokesTests */,
 				E360A91223F6910A003949BF /* Products */,
@@ -115,6 +127,7 @@
 				E360A91423F6910A003949BF /* AppDelegate.swift */,
 				E360A91623F6910A003949BF /* SceneDelegate.swift */,
 				E360A91823F6910A003949BF /* ContentView.swift */,
+				E39F2F2123FE83DC00E1FEC5 /* AboutView.swift */,
 				E360A91A23F6910C003949BF /* Assets.xcassets */,
 				E360A91F23F6910C003949BF /* LaunchScreen.storyboard */,
 				E360A92223F6910C003949BF /* Info.plist */,
@@ -162,7 +175,6 @@
 				E360A90D23F6910A003949BF /* Sources */,
 				E360A90E23F6910A003949BF /* Frameworks */,
 				E360A90F23F6910A003949BF /* Resources */,
-				E3ADF34523F8B07400B6E7C4 /* Build Version */,
 			);
 			buildRules = (
 			);
@@ -255,38 +267,20 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E3ADF34523F8B07400B6E7C4 /* Build Version */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Version";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "git=`sh /etc/profile; which git`\nbundleVersion=`\"$git\" rev-list --all |wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E360A90D23F6910A003949BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39F2F2823FE92D300E1FEC5 /* BackgroundView.swift in Sources */,
 				E3ADF34423F8A8C400B6E7C4 /* FancyButtonView.swift in Sources */,
 				E360A94523F699D2003949BF /* ViewStateView.swift in Sources */,
 				E360A91523F6910A003949BF /* AppDelegate.swift in Sources */,
 				E360A91723F6910A003949BF /* SceneDelegate.swift in Sources */,
+				E39F2F2223FE83DC00E1FEC5 /* AboutView.swift in Sources */,
 				E308D89D23F6AB1D00E9A2B2 /* LoadingView.swift in Sources */,
 				E360A91923F6910A003949BF /* ContentView.swift in Sources */,
+				E39F2F2623FE8DEC00E1FEC5 /* InfoButton.swift in Sources */,
 				E360A94323F6993A003949BF /* Store.swift in Sources */,
 				E360A94123F6941D003949BF /* NetworkingMiddleware.swift in Sources */,
 				E360A93F23F6937E003949BF /* Actions.swift in Sources */,

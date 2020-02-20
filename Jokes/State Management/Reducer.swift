@@ -9,8 +9,8 @@
 import Foundation
 import Ducks
 
-let reducer: Reducer<State> = { action, state in
-    State(
+let reducer: Reducer<AppState> = { action, state in
+    AppState(
         viewState: viewStateReducer(action, state.viewState),
         imageNumber: imageNumberReducer(action, state.imageNumber)
     )

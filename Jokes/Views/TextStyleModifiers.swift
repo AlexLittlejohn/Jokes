@@ -11,17 +11,15 @@ import SwiftUI
 struct PrimaryLabel: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .foregroundColor(Color.white)
-            .font(Font.system(size: 38, weight: .thin, design: .rounded))
-            .shadow(radius: 6)
+            .foregroundColor(Color("text"))
+            .font(Font.system(size: 24, design: .rounded))
     }
 }
 
 struct HeadingLabel: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .foregroundColor(Color.white)
-            .font(Font.system(size: 38, weight: .heavy, design: .rounded))
-            .shadow(radius: 3)
+            .foregroundColor(Color("text"))
+            .font(Font.system(size: 28, weight: .heavy, design: .rounded))
     }
 }

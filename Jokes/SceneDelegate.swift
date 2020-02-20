@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let store = Store(reducer: reducer, state: State.empty, middleware: [networkingMiddleware])
+        let store = Store(reducer: reducer, state: AppState.empty, middleware: [networkingMiddleware])
         
         store.dispatch(Actions.fetch)
         

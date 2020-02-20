@@ -9,7 +9,7 @@
 import Foundation
 import Ducks
 
-let networkingMiddleware: Middleware<State> = { store, next, action in
+let networkingMiddleware: Middleware<AppState> = { store, next, action in
     switch action {
     case Actions.fetch:
         let url = URL(string: "https://icanhazdadjoke.com/")!

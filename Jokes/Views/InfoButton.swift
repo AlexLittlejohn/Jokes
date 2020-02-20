@@ -1,14 +1,14 @@
 //
-//  FancyButtonView.swift
+//  InfoButton.swift
 //  Jokes
 //
-//  Created by Alex Littlejohn on 15/02/2020.
+//  Created by Alex Littlejohn on 20/02/2020.
 //  Copyright © 2020 zero. All rights reserved.
 //
 
 import SwiftUI
 
-struct FancyButtonView: View {
+struct InfoButtonView: View {
     
     let action: () -> Void
     let title: String
@@ -20,13 +20,9 @@ struct FancyButtonView: View {
     
     var body: some View {
         Button(action: action) {
-            Text(title)
-                .font(Font.headline)
-                .foregroundColor(Color.white)
-                .padding()
-                .background(Color("the_color"))
-                .clipShape(Capsule())
-            
+            Image(systemName: "info.circle.fill")
+                .accessibility(hint: Text(title))
+                .foregroundColor(.white).padding()
         }
     }
 }

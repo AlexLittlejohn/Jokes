@@ -14,11 +14,10 @@ struct Joke: Codable {
     let status: Int
 }
 
-struct State: StateType {
+struct AppState: StateType {
     let viewState: ViewState
     let imageNumber: Int
-    
-    static let empty = State(viewState: .empty, imageNumber: 0)
+    static let empty = AppState(viewState: .empty, imageNumber: 0)
 }
 
 enum ViewState: StateType {
@@ -26,4 +25,15 @@ enum ViewState: StateType {
     case loading
     case error
     case empty
+}
+
+extension AppState {
+    var isLoading: Bool {
+        switch viewState {
+        case .loading:
+            return true
+        default:
+            return false
+        }
+    }
 }

@@ -17,7 +17,6 @@ struct LoadingView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<LoadingView>) {
-        uiView.color = .white
         uiView.startAnimating()
     }
 }
