@@ -9,6 +9,15 @@
           "revision": "707edb3989aa8d30d52d4e58b21e0d4e96bc0617",
           "version": "1.0.1"
         }
+      },
+      {
+        "package": "PopupView",
+        "repositoryURL": "git@github.com:exyte/PopupView.git",
+        "state": {
+          "branch": null,
+          "revision": "3c6a25413e0ce7248d8e702c9764230fec2787a5",
+          "version": "0.0.7"
+        }
       }
     ]
   },
