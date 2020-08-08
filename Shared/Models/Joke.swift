@@ -10,6 +10,6 @@ public struct Joke: Hashable {
     public let setup, punchline: String
     
     public var shareable: String {
-        return setup + "\n.\n.\n" + punchline
+        return setup + "\n\n\n" + punchline
     }
 }

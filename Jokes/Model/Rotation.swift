@@ -17,7 +17,7 @@ enum Rotation {
         case .zero:
             return Angle(degrees: 0)
         case .random:
-            return Angle(degrees: Double.random(in: -360...360))
+            return Angle(degrees: Double.random(in: -500...500))
         }
     }
     

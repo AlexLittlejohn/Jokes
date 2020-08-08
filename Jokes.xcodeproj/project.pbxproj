@@ -33,6 +33,11 @@
 		E37A8F2224B8DB8800109D9F /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A8F2124B8DB8800109D9F /* Jokes.swift */; };
 		E37A8F2424B8E30600109D9F /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A8F2324B8E30600109D9F /* ShareSheet.swift */; };
 		E37A8F2624B90E0100109D9F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A8F2524B90E0100109D9F /* Color.swift */; };
+		E37F400A24DEBA550084E606 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F400924DEBA550084E606 /* BookView.swift */; };
+		E37F400C24DEBA9F0084E606 /* AnyTransition+MoveAndFade .swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F400B24DEBA9F0084E606 /* AnyTransition+MoveAndFade .swift */; };
+		E37F400E24DEBAFD0084E606 /* PopupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F400D24DEBAFD0084E606 /* PopupContentView.swift */; };
+		E37F401024DEBF9B0084E606 /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F400F24DEBF9B0084E606 /* JokeView.swift */; };
+		E37F401224DEC0B20084E606 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F401124DEC0B20084E606 /* ActionBarView.swift */; };
 		E38996D224D5CD28006EE2EF /* SeenMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38996D124D5CD28006EE2EF /* SeenMiddleware.swift */; };
 		E38996D424D5D73E006EE2EF /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38996D324D5D73E006EE2EF /* Rotation.swift */; };
 		E38F6FD924705CFD0057450F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F6FD824705CFD0057450F /* Then.swift */; };
@@ -113,6 +118,11 @@
 		E37A8F2124B8DB8800109D9F /* Jokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
 		E37A8F2324B8E30600109D9F /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		E37A8F2524B90E0100109D9F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E37F400924DEBA550084E606 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		E37F400B24DEBA9F0084E606 /* AnyTransition+MoveAndFade .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+MoveAndFade .swift"; sourceTree = "<group>"; };
+		E37F400D24DEBAFD0084E606 /* PopupContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupContentView.swift; sourceTree = "<group>"; };
+		E37F400F24DEBF9B0084E606 /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		E37F401124DEC0B20084E606 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
 		E38996D124D5CD28006EE2EF /* SeenMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMiddleware.swift; sourceTree = "<group>"; };
 		E38996D324D5D73E006EE2EF /* Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation.swift; sourceTree = "<group>"; };
 		E38F6FD824705CFD0057450F /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
@@ -160,10 +170,14 @@
 		E308D89B23F6AB0D00E9A2B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E37F400D24DEBAFD0084E606 /* PopupContentView.swift */,
 				E3589B1C24B8AFCD00CF4607 /* JokeSceneView.swift */,
 				E37A8F2324B8E30600109D9F /* ShareSheet.swift */,
 				E334C22F24C3418A000C5D64 /* FavouritesView.swift */,
 				E37A8F1E24B8BC7F00109D9F /* Modifiers.swift */,
+				E37F400924DEBA550084E606 /* BookView.swift */,
+				E37F400F24DEBF9B0084E606 /* JokeView.swift */,
+				E37F401124DEC0B20084E606 /* ActionBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +296,7 @@
 				E38F6FD824705CFD0057450F /* Then.swift */,
 				E37A8F1C24B8B8F300109D9F /* Measurements.swift */,
 				E37A8F2524B90E0100109D9F /* Color.swift */,
+				E37F400B24DEBA9F0084E606 /* AnyTransition+MoveAndFade .swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -487,9 +502,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37F401224DEC0B20084E606 /* ActionBarView.swift in Sources */,
 				E38F6FD924705CFD0057450F /* Then.swift in Sources */,
 				E37A8F1F24B8BC7F00109D9F /* Modifiers.swift in Sources */,
 				E360A91523F6910A003949BF /* AppDelegate.swift in Sources */,
+				E37F401024DEBF9B0084E606 /* JokeView.swift in Sources */,
 				E360A91723F6910A003949BF /* SceneDelegate.swift in Sources */,
 				E37A8F2624B90E0100109D9F /* Color.swift in Sources */,
 				E38996D424D5D73E006EE2EF /* Rotation.swift in Sources */,
@@ -499,9 +516,12 @@
 				E360A93F23F6937E003949BF /* Actions.swift in Sources */,
 				E360A93D23F69355003949BF /* Reducer.swift in Sources */,
 				E360A93B23F69152003949BF /* State.swift in Sources */,
+				E37F400E24DEBAFD0084E606 /* PopupContentView.swift in Sources */,
 				E37A8F1D24B8B8F300109D9F /* Measurements.swift in Sources */,
 				E334C23024C3418A000C5D64 /* FavouritesView.swift in Sources */,
+				E37F400C24DEBA9F0084E606 /* AnyTransition+MoveAndFade .swift in Sources */,
 				E37A8F2424B8E30600109D9F /* ShareSheet.swift in Sources */,
+				E37F400A24DEBA550084E606 /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +573,7 @@
 		E315DDDA2425536200A894C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -563,6 +584,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Shared/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +604,7 @@
 		E315DDDB2425536200A894C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -592,6 +615,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Shared/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -772,6 +796,7 @@
 				DEVELOPMENT_TEAM = 2466624KEK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Jokes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -779,7 +804,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.jokes;
 				PRODUCT_NAME = "Joke Book";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -794,6 +819,7 @@
 				DEVELOPMENT_TEAM = 2466624KEK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Jokes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -801,7 +827,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.jokes;
 				PRODUCT_NAME = "Joke Book";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
