@@ -23,41 +23,73 @@ struct FavouritesView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(store.state.favourites, id: \.self) { value in
-                    FavouritesItemView(joke: jokes[value], dispatch: store.dispatch)
-                        .padding(.vertical)
-                    .contextMenu(ContextMenu {
+
+            Group {
+                if store.state.favourites.isEmpty {
+                    VStack {
+                        Image("EmptyFavourites")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                            .padding()
+
+                        Text("This is where you'll see all your favourite jokes.")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color.label)
+                            .padding(.bottom, 4)
+
+                        Text("Just tap the small heart to save them.")
+                            .font(.system(size: 18, weight: .regular))
+                            .foregroundColor(Color.label)
+                            .padding(.bottom)
+
                         Button(action: {
-                            store.dispatch(Actions.toggleFavourite(jokes[value]))
-                        }) {
-                            Image(systemName: "heart")
-                                .foregroundColor(.systemRed)
-                            Text("Remove as favourite")
-                                .foregroundColor(Color.blue)
+                            presentation.wrappedValue.dismiss()
+                        }, label: {
+                            Text("Cool beans!")
+                        }).buttonStyle(CustomButtonStyle(color: Color.systemTeal, square: false))
+                    }
+                    .padding()
+                    .multilineTextAlignment(.center)
+
+                } else {
+                    List {
+                        ForEach(store.state.favourites, id: \.self) { value in
+                            FavouritesItemView(joke: jokes[value], dispatch: store.dispatch)
+                                .padding(.vertical)
+                                .contextMenu(ContextMenu {
+                                    Button(action: {
+                                        store.dispatch(Actions.toggleFavourite(jokes[value]))
+                                    }) {
+                                        Image(systemName: "heart")
+                                            .foregroundColor(.systemRed)
+                                        Text("Remove as favourite")
+                                            .foregroundColor(Color.blue)
+                                    }
+
+                                    Button(action: {
+                                        shareable = jokes[value].shareable
+                                        shareSheetVisible = true
+                                    }) {
+                                        Image(systemName: "square.and.arrow.up")
+                                            .foregroundColor(.systemRed)
+                                        Text("Share")
+                                            .foregroundColor(Color.blue)
+                                    }
+                                })
                         }
-                        
-                        Button(action: {
-                            shareable = jokes[value].shareable
-                            shareSheetVisible = true
-                        }) {
-                            Image(systemName: "square.and.arrow.up")
-                                .foregroundColor(.systemRed)
-                            Text("Share")
-                                .foregroundColor(Color.blue)
+                        .onDelete { set in
+                            store.dispatch(Actions.removeFavourites(set))
                         }
-                    })
-                }
-                .onDelete { set in
-                    store.dispatch(Actions.removeFavourites(set))
+                    }
+                    .sheet(isPresented: $shareSheetVisible) {
+                        ShareSheet(activityItems: [shareable])
+                            .background(Color.systemGreen)
+                            .edgesIgnoringSafeArea(.bottom)
+                    }
+                    .navigationBarTitle("Favourites")
                 }
             }
-            .sheet(isPresented: $shareSheetVisible) {
-                ShareSheet(activityItems: [shareable])
-                    .background(Color.systemGreen)
-                    .edgesIgnoringSafeArea(.bottom)
-            }
-            .navigationBarTitle("Favourites")
             .navigationBarItems(trailing: doneButton)
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -67,7 +99,11 @@ struct FavouritesView: View {
         Button(action: {
             presentation.wrappedValue.dismiss()
         }) {
-            Text("Done").font(.system(size: 16, weight: .semibold))
+            Image(systemName: "multiply")
+                .font(.system(size: 16, weight: .semibold))
+                .accessibility(label: Text("Close favourites"))
+                .padding(.leading)
+                .padding(.vertical)
         }
     }
 }
