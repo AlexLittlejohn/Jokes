@@ -38,6 +38,8 @@
 		E37F400E24DEBAFD0084E606 /* PopupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F400D24DEBAFD0084E606 /* PopupContentView.swift */; };
 		E37F401024DEBF9B0084E606 /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F400F24DEBF9B0084E606 /* JokeView.swift */; };
 		E37F401224DEC0B20084E606 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F401124DEC0B20084E606 /* ActionBarView.swift */; };
+		E37F401424DEC4100084E606 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E37F401324DEC4100084E606 /* Settings.bundle */; };
+		E37F401624DECC480084E606 /* FavouritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F401524DECC480084E606 /* FavouritesItemView.swift */; };
 		E38996D224D5CD28006EE2EF /* SeenMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38996D124D5CD28006EE2EF /* SeenMiddleware.swift */; };
 		E38996D424D5D73E006EE2EF /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38996D324D5D73E006EE2EF /* Rotation.swift */; };
 		E38F6FD924705CFD0057450F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F6FD824705CFD0057450F /* Then.swift */; };
@@ -123,6 +125,8 @@
 		E37F400D24DEBAFD0084E606 /* PopupContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupContentView.swift; sourceTree = "<group>"; };
 		E37F400F24DEBF9B0084E606 /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
 		E37F401124DEC0B20084E606 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
+		E37F401324DEC4100084E606 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E37F401524DECC480084E606 /* FavouritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesItemView.swift; sourceTree = "<group>"; };
 		E38996D124D5CD28006EE2EF /* SeenMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeenMiddleware.swift; sourceTree = "<group>"; };
 		E38996D324D5D73E006EE2EF /* Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation.swift; sourceTree = "<group>"; };
 		E38F6FD824705CFD0057450F /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				E3589B1C24B8AFCD00CF4607 /* JokeSceneView.swift */,
 				E37A8F2324B8E30600109D9F /* ShareSheet.swift */,
 				E334C22F24C3418A000C5D64 /* FavouritesView.swift */,
+				E37F401524DECC480084E606 /* FavouritesItemView.swift */,
 				E37A8F1E24B8BC7F00109D9F /* Modifiers.swift */,
 				E37F400924DEBA550084E606 /* BookView.swift */,
 				E37F400F24DEBF9B0084E606 /* JokeView.swift */,
@@ -248,6 +253,7 @@
 				E360A91F23F6910C003949BF /* LaunchScreen.storyboard */,
 				E360A92223F6910C003949BF /* Info.plist */,
 				E360A91C23F6910C003949BF /* Preview Content */,
+				E37F401324DEC4100084E606 /* Settings.bundle */,
 			);
 			path = Jokes;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37F401424DEC4100084E606 /* Settings.bundle in Resources */,
 				E360A92123F6910C003949BF /* LaunchScreen.storyboard in Resources */,
 				E360A91E23F6910C003949BF /* Preview Assets.xcassets in Resources */,
 				E360A91B23F6910C003949BF /* Assets.xcassets in Resources */,
@@ -515,6 +522,7 @@
 				E3589B1D24B8AFCD00CF4607 /* JokeSceneView.swift in Sources */,
 				E360A93F23F6937E003949BF /* Actions.swift in Sources */,
 				E360A93D23F69355003949BF /* Reducer.swift in Sources */,
+				E37F401624DECC480084E606 /* FavouritesItemView.swift in Sources */,
 				E360A93B23F69152003949BF /* State.swift in Sources */,
 				E37F400E24DEBAFD0084E606 /* PopupContentView.swift in Sources */,
 				E37A8F1D24B8B8F300109D9F /* Measurements.swift in Sources */,
@@ -791,16 +799,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20200801;
+				CURRENT_PROJECT_VERSION = 20201117;
 				DEVELOPMENT_ASSET_PATHS = "\"Jokes/Preview Content\"";
 				DEVELOPMENT_TEAM = 2466624KEK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Jokes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.jokes;
 				PRODUCT_NAME = "Joke Book";
 				SWIFT_VERSION = 5.0;
@@ -814,16 +823,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20200801;
+				CURRENT_PROJECT_VERSION = 20201117;
 				DEVELOPMENT_ASSET_PATHS = "\"Jokes/Preview Content\"";
 				DEVELOPMENT_TEAM = 2466624KEK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Jokes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.jokes;
 				PRODUCT_NAME = "Joke Book";
 				SWIFT_VERSION = 5.0;
@@ -931,7 +941,7 @@
 			repositoryURL = "git@github.com:exyte/PopupView.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.7;
+				minimumVersion = 0.0.11;
 			};
 		};
 		E360A93723F69139003949BF /* XCRemoteSwiftPackageReference "Ducks" */ = {

@@ -34,9 +34,7 @@ struct JokeView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
             .font(Font.system(size: 44, weight: .heavy))
-            .animation(nil)
             .opacity(punchlineVisible ? 0.4 : 1)
-            .animation(.spring())
     }
     
     var punchline: some View {
@@ -64,7 +62,7 @@ struct JokeView: View {
 
     func showPunchline() {
         withAnimation(.spring()) {
-            self.punchlineVisible = true
+            punchlineVisible = true
         }
     }
 }

@@ -1,8 +1,8 @@
-#  Alex's lame jokes
+#  The Joke Book
 
-Over 500 lame jokes sourced from [https://icanhasdadjoke.com](https://icanhasdadjoke.com). Illustrations by [https://icons8.com](https://icons8.com/ouch)
+Around 350ish jokes for your enjoyment
 
 ### Technical stuff
 
-To build this project you'll need to Xcode 11. The app supports iOS 13 and is built using SwiftUI. 
+To build this project you'll need to Xcode 11. The app supports iOS 14 and is built using SwiftUI. 
 

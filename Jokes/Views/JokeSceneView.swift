@@ -15,8 +15,6 @@ struct JokeSceneView: View {
     
     @EnvironmentObject var store: Store<AppState>
     @State var sheetVisible: Bool = false
-    @State var shareSheetVisible: Bool = false
-    @State var favouritesVisible: Bool = false
     @State var showingPopup: Bool = false
     @State var popupContent: PopupContent = PopupContent()
         
@@ -40,27 +38,14 @@ struct JokeSceneView: View {
             .padding(Measurements.larger)
             .padding(.bottom, Measurements.largest + Measurements.large)
         }
-        .sheet(isPresented: $sheetVisible) {
-            if self.shareSheetVisible {
-                ShareSheet(activityItems: [self.store.state.joke.shareable])
-                    .background(Color.systemGreen)
-                    .edgesIgnoringSafeArea(.bottom)
-            } else {
-                FavouritesView().environmentObject(self.store)
-            }
-        }
         .popup(isPresented: $showingPopup, type: .floater(), position: .top, animation: Animation.spring(), autohideIn: 2) {
-                PopupContentView(content: self.popupContent)
+                PopupContentView(content: popupContent)
         }
         .overlay(actionBar, alignment: .bottomLeading)
     }
     
     var actionBar: some View {
-        ActionBarView(
-            nextJoke: nextJoke,
-            showShareSheet: showShareSheet,
-            showFavourites: showFavourites
-        )
+        ActionBarView(nextJoke: nextJoke)
     }
     
     var favouriteButton: some View {
@@ -76,9 +61,9 @@ struct JokeSceneView: View {
     
     var contextCopyButton: some View {
         Button(action: {
-            UIPasteboard.general.string = self.store.state.joke.shareable
-            self.popupContent = copyPopupContent
-            self.showingPopup = true
+            UIPasteboard.general.string = store.state.joke.shareable
+            popupContent = copyPopupContent
+            showingPopup = true
         }) {
             Image(systemName: "doc.on.doc")
                 .foregroundColor(.systemRed)
@@ -89,22 +74,9 @@ struct JokeSceneView: View {
     
     func nextJoke() {
         withAnimation(.spring()) {
-            self.store.dispatch(Actions.randomJoke)
+            store.dispatch(Actions.randomJoke)
         }
     }
-    
-    func showShareSheet() {
-        shareSheetVisible = true
-        favouritesVisible = false
-        sheetVisible = true
-    }
-    
-    func showFavourites() {
-        shareSheetVisible = false
-        favouritesVisible = true
-        sheetVisible = true
-    }
-    
     func toggleFavourite() {
         popupContent = store.state.isFavourite() ? removeFavouritePopupContent : addFavouritePopupContent
         showingPopup = true

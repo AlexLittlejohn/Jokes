@@ -21,10 +21,10 @@ struct BookView: View {
             .rotationEffect(rotation)
             .animation(.spring())
             .onTapGesture {
-                if self.rotation == Rotation.zero.value {
-                    self.rotation = Rotation.random.value
+                if rotation == Rotation.zero.value {
+                    rotation = Rotation.random.value
                 } else {
-                    self.rotation = Rotation.zero.value
+                    rotation = Rotation.zero.value
                 }
         }
     }
